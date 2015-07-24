@@ -269,8 +269,11 @@ function gothere(where)
 	var leading = location.href.slice(0,i);
 	if (location.pathname.slice(-4) == '.cgi')
 	{
-	        location.assign(leading+"/"+"index.cgi?"+where);
+                var j = location.href.lastIndexOf('?');
+                var scriptname = location.href.slice(i+1,j+1);
+                location.assign(leading+"/"+scriptname+where);
 	}
+
 	else
 	{
 		location.assign(leading+"/"+sessionname+"_"+where+".html");
@@ -408,9 +411,9 @@ Please email Judy Kay for an appointment.
 <p/>
 
 <b>Labs:</b><br/>
-18.00 - 20.00 Tuesday. (School of IT lab 118) 
+6pm - 7pm Tuesday. (School of IT lab 118) 
 <br/>
-18.00 - 20.00 Tuesday. (School of IT lab 117)
+6pm - 7pm Tuesday. (School of IT lab 117)
 </div>
 </td></tr></table>
 <!-- Cell END -->
@@ -475,7 +478,7 @@ be available from the elearning site.
 <tr>
     <td width="91%"></td>
     <td valign=bottom>
-	<span style="font-family: helvetica,arial,sans-serif;font-size: 60%;">Last changed: Fri Jul 24 13:52:06 2015</span></td>
+	<span style="font-family: helvetica,arial,sans-serif;font-size: 60%;">Last changed: Fri Jul 24 14:10:40 2015</span></td>
 </tr></table>
 
 
